@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LandingViewController" customModule="GitHubProfile" customModuleProvider="target">
+            <connections>
+                <outlet property="usernameTextField" destination="b1f-00-Rlr" id="W8V-sP-r8K"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="21n-tS-b4k">
+                    <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="github" translatesAutoresizingMaskIntoConstraints="NO" id="xYy-WA-cRU">
+                            <rect key="frame" x="103.5" y="40" width="207" height="207"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="xYy-WA-cRU" secondAttribute="height" multiplier="1:1" id="Pcn-VG-BND"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GitHub" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQg-OM-yE2">
+                            <rect key="frame" x="168.5" y="271" width="77.5" height="29"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eTJ-eK-H2z">
+                            <rect key="frame" x="16" y="377" width="382" height="60"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="https://github.com/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Amq-4x-h7K">
+                                    <rect key="frame" x="16" y="21" width="134.5" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b1f-00-Rlr">
+                                    <rect key="frame" x="154.5" y="13" width="211.5" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" name="CustomDarkGray"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="b1f-00-Rlr" secondAttribute="trailing" constant="16" id="4La-kE-e7K"/>
+                                <constraint firstItem="Amq-4x-h7K" firstAttribute="leading" secondItem="eTJ-eK-H2z" secondAttribute="leading" constant="16" id="4vM-FG-Ejf"/>
+                                <constraint firstItem="Amq-4x-h7K" firstAttribute="centerY" secondItem="eTJ-eK-H2z" secondAttribute="centerY" id="4yo-ht-ypt"/>
+                                <constraint firstItem="b1f-00-Rlr" firstAttribute="leading" secondItem="Amq-4x-h7K" secondAttribute="trailing" constant="4" id="BYH-NB-pmz"/>
+                                <constraint firstItem="b1f-00-Rlr" firstAttribute="centerY" secondItem="Amq-4x-h7K" secondAttribute="centerY" id="azm-Of-KCO"/>
+                                <constraint firstAttribute="height" constant="60" id="fZI-eY-T3e"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHO-Kt-7f4">
+                            <rect key="frame" x="167" y="461" width="80" height="40"/>
+                            <color key="backgroundColor" name="CustomDarkGray"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="jEL-qZ-zjA"/>
+                                <constraint firstAttribute="height" constant="40" id="nBA-E3-0RU"/>
+                            </constraints>
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Submit">
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                    <size key="value" width="1" height="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                    <color key="value" systemColor="systemGray3Color"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="submitTapped:" destination="-1" eventType="touchUpInside" id="7Qu-Xu-NFu"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="AQg-OM-yE2" firstAttribute="top" secondItem="xYy-WA-cRU" secondAttribute="bottom" constant="24" id="2Rb-bm-zxH"/>
+                        <constraint firstItem="eTJ-eK-H2z" firstAttribute="leading" secondItem="21n-tS-b4k" secondAttribute="leading" constant="16" id="AD5-Am-tg5"/>
+                        <constraint firstItem="AQg-OM-yE2" firstAttribute="centerX" secondItem="21n-tS-b4k" secondAttribute="centerX" id="Q3g-Rh-XjR"/>
+                        <constraint firstItem="eTJ-eK-H2z" firstAttribute="centerY" secondItem="21n-tS-b4k" secondAttribute="centerY" id="Uhw-rK-YnQ"/>
+                        <constraint firstItem="oHO-Kt-7f4" firstAttribute="centerX" secondItem="21n-tS-b4k" secondAttribute="centerX" id="Ym3-kp-c0T"/>
+                        <constraint firstItem="xYy-WA-cRU" firstAttribute="top" secondItem="21n-tS-b4k" secondAttribute="top" constant="40" id="Yt7-hU-AZc"/>
+                        <constraint firstAttribute="trailing" secondItem="eTJ-eK-H2z" secondAttribute="trailing" constant="16" id="exD-LW-fUs"/>
+                        <constraint firstItem="xYy-WA-cRU" firstAttribute="centerX" secondItem="21n-tS-b4k" secondAttribute="centerX" id="gbA-Pf-jTt"/>
+                        <constraint firstItem="eTJ-eK-H2z" firstAttribute="top" relation="greaterThanOrEqual" secondItem="AQg-OM-yE2" secondAttribute="bottom" constant="16" id="uKz-3T-S7U"/>
+                        <constraint firstItem="oHO-Kt-7f4" firstAttribute="top" secondItem="eTJ-eK-H2z" secondAttribute="bottom" constant="24" id="wDH-R0-RSN"/>
+                        <constraint firstItem="xYy-WA-cRU" firstAttribute="width" secondItem="21n-tS-b4k" secondAttribute="width" multiplier="0.5" id="yGM-KS-79R"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="21n-tS-b4k" secondAttribute="trailing" id="8Xl-gY-Tmf"/>
+                <constraint firstItem="21n-tS-b4k" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Hul-C3-Pmq"/>
+                <constraint firstItem="21n-tS-b4k" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="c0x-hB-Oka"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="21n-tS-b4k" secondAttribute="bottom" id="mDR-q8-9Zr"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="124"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="github" width="512" height="512"/>
+        <namedColor name="CustomDarkGray">
+            <color red="0.25882352941176473" green="0.25882352941176473" blue="0.25882352941176473" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
