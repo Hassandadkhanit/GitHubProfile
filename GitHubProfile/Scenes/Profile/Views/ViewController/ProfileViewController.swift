@@ -53,7 +53,7 @@ class ProfileViewController: BaseViewController {
         self.followersLabel.text = "\(self.viewModel?.user?.followers ?? 0)"
         self.FollowingsLabel.text = "\(self.viewModel?.user?.following ?? 0)"
         self.repositoriesLabel.text = "\(self.viewModel?.user?.public_repos ?? 0)"
-        self.descLabel.text =  "| \(self.viewModel?.user?.bio ?? "(Bio")) | \(self.viewModel?.user?.company ?? "(Company)") | \(self.viewModel?.user?.location ?? "(Address)") | \(self.viewModel?.user?.email ?? "(@Email)") |"
+        self.descLabel.text =  "| \(self.viewModel?.user?.bio ?? "(bio")) | \(self.viewModel?.user?.company ?? "(company)") | \(self.viewModel?.user?.location ?? "(address)") | \(self.viewModel?.user?.email ?? "(@email)") |"
         
     }
     
