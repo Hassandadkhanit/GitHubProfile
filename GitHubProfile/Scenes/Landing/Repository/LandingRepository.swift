@@ -17,12 +17,6 @@ class LandingRepository : LandingRepositoryProtocol {
     //MARK: - API Calling
     var subscription = Set<AnyCancellable>()
     func getUserData(userName: String)  -> Future<UserModel?, Error> {
-        /*
-        return APIClientHandler.shared.sendRequest(urlString: RouteUrls.getRouteUrlWith(route:                                                  RouteUrls.usersRoute) + "/\(userName)",
-                                                   parameters: [:],
-                                                   method: .get,
-                                                   type: UserModel.self)
-         */
         return Future<UserModel?, Error> { promise in
             APIClientHandler.shared.sendRequest(urlString: RouteUrls.getRouteUrlWith(route:                                                  RouteUrls.usersRoute) + "/\(userName)", parameters: [:], method: .get)
                 .sink { completion in
