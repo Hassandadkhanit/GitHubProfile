@@ -13,6 +13,8 @@ This Project will display the implementation of GitHub Public API's using SOLID 
 
 [![PlatForm](https://img.shields.io/badge/Platform-iOS%20--%20iPhone-green)](http://www.gnu.org/licenses/agpl-3.0)
 
+[![Licence](https://img.shields.io/badge/License-MIT-brightgreen)](http://www.gnu.org/licenses/agpl-3.0)
+
 
 ## Implementation
 
@@ -176,6 +178,8 @@ For detail documentation Please [click here](https://docs.fastlane.tools/getting
 
 If you have any feedback, please reach out to us at hassandadkhanit@gmail.com
 
+## License
 
-![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
+Distributed under the [MIT](https://choosealicense.com/licenses/mit/) License.
+
 
