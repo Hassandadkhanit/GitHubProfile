@@ -11,14 +11,14 @@ import Combine
 class ProfileViewController: BaseViewController {
 
     
+    @IBOutlet weak var descLabel: UILabel!
+    @IBOutlet weak var loginIdLabel: UILabel!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var locationLabel: UILabel!
-    @IBOutlet weak var companyLabel: UILabel!
     @IBOutlet weak var FollowingsLabel: UILabel!
     @IBOutlet weak var followersLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var repositoriesLabel: UILabel!
     var viewModel: ProfileViewModelProtocol?
     var subscription = Set<AnyCancellable>()
 
@@ -49,11 +49,12 @@ class ProfileViewController: BaseViewController {
     func setData() {
         self.profileImageView.setImage(withUrl: self.viewModel?.user?.avatar_url ?? "", withPlaceHolder: "")
         self.nameLabel.text = self.viewModel?.user?.name ?? "(name)"
-        self.companyLabel.text = self.viewModel?.user?.company ?? "(company)"
-        self.locationLabel.text = self.viewModel?.user?.location ?? "(address)"
-        self.emailLabel.text = self.viewModel?.user?.email ?? "(@email)"
-        self.followersLabel.text = "Followers - \(self.viewModel?.user?.followers ?? 0)"
-        self.FollowingsLabel.text = "Followings - \(self.viewModel?.user?.following ?? 0)"
+        self.loginIdLabel.text = "@\(self.viewModel?.user?.login ?? "(ID)")"
+        self.followersLabel.text = "\(self.viewModel?.user?.followers ?? 0)"
+        self.FollowingsLabel.text = "\(self.viewModel?.user?.following ?? 0)"
+        self.repositoriesLabel.text = "\(self.viewModel?.user?.public_repos ?? 0)"
+        self.descLabel.text =  "| \(self.viewModel?.user?.bio ?? "(Bio")) | \(self.viewModel?.user?.company ?? "(Company)") | \(self.viewModel?.user?.location ?? "(Address)") | \(self.viewModel?.user?.email ?? "(@Email)") |"
+        
     }
     
     
