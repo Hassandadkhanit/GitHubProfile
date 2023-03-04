@@ -16,7 +16,7 @@ This Project will display the implementation of GitHub Public API's using SOLID 
 
 ## Implementation
 
-- [Design Pattern MVVM + Repository (Using SOLID    Principles)](https://github.com/Hassandadkhanit/GitHubProfile/branch#mvvm--repository-implementation)
+- [Design Pattern MVVM + Repository (Using SOLID    Principles)](https://github.com/Hassandadkhanit/GitHubProfile/tree/phase2#mvvm--repository-implementation)
 - [Combine Framework](https://github.com/Hassandadkhanit/GitHubProfile/tree/phase2#combine-implementation)
 - [iOS Environments](https://github.com/Hassandadkhanit/GitHubProfile/tree/phase2#ios-environments)
 - [Unit Test Cases](https://github.com/Hassandadkhanit/GitHubProfile/tree/phase2#unit-test-cases)
