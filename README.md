@@ -4,7 +4,8 @@
 This Project will display the implementation of GitHub Public API's using SOLID principles and Design patterns (MVVM+R) with Reactive Combine framework
 
 
-
+## Screenshots
+<img src="https://github.com/Hassandadkhanit/GitHubProfile/blob/phase2/RespositoryAssets/screenshot1.png?raw=true"  width="10%" height="20%">
 
 ## Supports
 
@@ -172,14 +173,14 @@ CI/CD Implementation (In Progress)
 For detail documentation Please [click here](https://docs.fastlane.tools/getting-started/ios/setup/)
 
 
-
-
-## Feedback
-
-If you have any feedback, please reach out to us at hassandadkhanit@gmail.com
-
 ## License
 
 Distributed under the [MIT](https://choosealicense.com/licenses/mit/) License.
 
+## Contributing
 
+Any contribution is more than welcome! You can contribute through pull requests and issues on GitHub.
+
+## Feedback
+
+If you have any feedback, please reach out to us at hassandadkhanit@gmail.com
