@@ -18,7 +18,7 @@ This Project will display the implementation of GitHub Public API's using SOLID 
  - [Combine Framework]()
  - [iOS Environments]()
 - [Unit Test Cases]()
-- [Api Implementation](https://github.com/Hassandadkhanit/GitHubProfile#API-Reference)
+- [Api Implementation](https://github.com/Hassandadkhanit/GitHubProfile/tree/phase2#API-Reference)
 - [IQKeyboard Implementation]()
 - [SwiftLint]()
 - [CI/CD Using FastLane (In Progress) ]()
