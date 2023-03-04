@@ -16,7 +16,7 @@ This Project will display the implementation of GitHub Public API's using SOLID 
 
 ## Implementation
 
-- [Design Pattern MVVM + Repository (Using SOLID    Principles)](https://github.com/{{ repository.name}}/{{ current.branch }}#mvvm--repository-implementation)
+- [Design Pattern MVVM + Repository (Using SOLID    Principles)](https://github.com/Hassandadkhanit/GitHubProfile/branch#mvvm--repository-implementation)
 - [Combine Framework](https://github.com/Hassandadkhanit/GitHubProfile/tree/phase2#combine-implementation)
 - [iOS Environments](https://github.com/Hassandadkhanit/GitHubProfile/tree/phase2#ios-environments)
 - [Unit Test Cases](https://github.com/Hassandadkhanit/GitHubProfile/tree/phase2#unit-test-cases)
@@ -109,7 +109,7 @@ For detail documentation Please [click here](https://medium.com/@koromikoneo/app
 
 For all the network calls we have created the base call 
 
-***
+```
 
     class APIClientHandler {
     
@@ -120,11 +120,11 @@ For all the network calls we have created the base call
     init(session: URLSession = URLSession(configuration: URLSessionConfiguration.default)) {
         self.session = session
     }
-***
+```
 
 To send request using datapublisher
 
-***
+```
         func sendRequest(urlString: String, parameters: [String: Any?],method: HTTPMethods) -> AnyPublisher<Data, Error> {
         guard let request = self.makeRequest(urlString: urlString, parameters: parameters, method: method) else {
             return .fail(NetworkError.invalidRequest)
@@ -149,7 +149,7 @@ To send request using datapublisher
             .eraseToAnyPublisher()
     }
 
-***
+```
 
 ## IQKeyboard
 
