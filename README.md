@@ -5,7 +5,8 @@ This Project will display the implementation of GitHub Public API's using SOLID 
 
 
 ## Screenshots
-<img src="https://github.com/Hassandadkhanit/GitHubProfile/blob/phase2/RespositoryAssets/screenshot1.png?raw=true"  width="10%" height="20%">
+<img src="https://github.com/Hassandadkhanit/GitHubProfile/blob/phase2/RespositoryAssets/screenshot1.png?raw=true"  width="20%" height="40%">
+<img src="https://github.com/Hassandadkhanit/GitHubProfile/blob/phase2/RespositoryAssets/screenshot2.png?raw=true"  width="20%" height="40%">
 
 ## Supports
 
