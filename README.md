@@ -29,7 +29,7 @@ This Project will display the implementation of GitHub Public API's using SOLID 
 
 
 
-```http 
+```
   GET https://api.github.com/users/{username}
 ```
 
@@ -88,7 +88,7 @@ Difference Scheme have:
 - Multiple App Names
 - Multiple environment will have e.g (baseUrl,Auth Keys etc)
 
-For details documentation Please [click here](https://sarunw.com/posts/how-to-set-up-ios-environments/#assign-current-configuration-to-info.plist)
+For detail documentation Please [click here](https://sarunw.com/posts/how-to-set-up-ios-environments/#assign-current-configuration-to-info.plist)
 
 ## Unit Test cases
 
@@ -125,7 +125,7 @@ For all the network calls we have created the base call
 To send request using datapublisher
 
 ```
-        func sendRequest(urlString: String, parameters: [String: Any?],method: HTTPMethods) -> AnyPublisher<Data, Error> {
+    func sendRequest(urlString: String, parameters: [String: Any?],method: HTTPMethods) -> AnyPublisher<Data, Error> {
         guard let request = self.makeRequest(urlString: urlString, parameters: parameters, method: method) else {
             return .fail(NetworkError.invalidRequest)
         }
