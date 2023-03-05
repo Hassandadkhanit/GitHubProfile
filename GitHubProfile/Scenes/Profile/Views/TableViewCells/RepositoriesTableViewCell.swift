@@ -8,6 +8,7 @@
 import UIKit
 
 class RepositoriesTableViewCell: UITableViewCell {
+    
     @IBOutlet weak var forkView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var visibilityLabel: UILabel!
@@ -16,6 +17,7 @@ class RepositoriesTableViewCell: UITableViewCell {
     @IBOutlet weak var languageLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var languageView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,23 +27,19 @@ class RepositoriesTableViewCell: UITableViewCell {
         self.updatedDateTimeLabel.font = UIFont.robotoRegular(fontSize: 16)
     }
    
-    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
-    func setData (repObj: RepoModel){
+    func setData (repObj: RepoModel) {
         titleLabel.text = repObj.name ?? ""
         descLabel.text = repObj.description ?? ""
         visibilityLabel.text = repObj.visibility ?? ""
         languageLabel.text = repObj.language ?? "(not found)"
-
         languageView.isHidden = repObj.language?.isBlank ?? false ? true : false
-
-       
-        forkLabel.text = "\(repObj.forks_count ?? 0)"
-        updatedDateTimeLabel.text = "Updated on \(repObj.updated_at?.convertDate(fromFormate: Constants.dateFormate, toFormate: Constants.dateFormate2) ?? "")"
+        forkLabel.text = "\(repObj.forksCount ?? 0)"
+        updatedDateTimeLabel.text = "Updated on \(repObj.updatedAt?.convertDate(fromFormate: Constants.dateFormate, toFormate: Constants.dateFormate2) ?? "")"
 
     }
     

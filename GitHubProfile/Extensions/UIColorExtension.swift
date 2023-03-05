@@ -10,7 +10,7 @@ import UIKit
 
 extension UIColor {
     
-    public class var CustomDarkGray: UIColor {
+    public class var customDarkGray: UIColor {
         return UIColor(named: "CustomDarkGray") ?? .darkGray
     }
 }

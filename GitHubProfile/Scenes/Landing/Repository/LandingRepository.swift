@@ -14,16 +14,17 @@ protocol LandingRepositoryProtocol {
     func getUserData(userName: String) -> Future<UserModel?, Error>
 }
 class LandingRepository : LandingRepositoryProtocol {
-    //MARK: - API Calling
+    // MARK: - API Calling
     var subscription = Set<AnyCancellable>()
     func getUserData(userName: String)  -> Future<UserModel?, Error> {
         return Future<UserModel?, Error> { promise in
-            APIClientHandler.shared.sendRequest(urlString: RouteUrls.getRouteUrlWith(route:                                                  RouteUrls.usersRoute) + "/\(userName)", parameters: [:], method: .get)
+            APIClientHandler.shared.sendRequest(urlString: RouteUrls.getRouteUrlWith(route:                                                  RouteUrls.usersRoute) + "/\(userName)",
+                                                parameters: [:],
+                                                method: .get)
                 .sink { completion in
                     switch completion {
                     case .failure(let error):
                         promise(.failure(error))
-                        break
                     case .finished:
                         print("Finished")
                     }
@@ -36,16 +37,15 @@ class LandingRepository : LandingRepositoryProtocol {
                     }
                 }.store(in: &self.subscription)
         }
-        
     }
     
-    //MARK: DataBase Implementation
-    func addUserDataFromDataBase(){
+    // MARK: - DataBase Implementation
+    func addUserDataFromDataBase() {
         let user =  UserEntity(context: CoreDataManager.shared.context)
         user.name = "hassan"
         CoreDataManager.shared.saveContext()
     }
-    func getUserDataFromDataBase(){
+    func getUserDataFromDataBase() {
         do {
             guard let result = try CoreDataManager.shared.context.fetch(UserEntity.fetchRequest()) as? [UserEntity] else {
                 return

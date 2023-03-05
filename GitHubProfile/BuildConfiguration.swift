@@ -19,26 +19,23 @@ enum Environment: String { // 1
 
 class BuildConfiguration { // 2
     static let shared = BuildConfiguration()
-    var baseUrl = "https://api.github.com/"
-    var environment: Environment
-    
-
-    
+    var environment: Environment?
+    var baseURL: String { // 1
+        switch self.environment {
+        case .debugDevelopment, .releaseDevelopment:
+            return "https://api.github.com/"
+        case .debugStaging, .releaseStaging:
+            return "https://staging.example.com/api"
+        case .debugProduction, .releaseProduction:
+            return "https://example.com/api"
+        case .none:
+            return ""
+        }
+    }
     init() {
-        let currentConfiguration = Bundle.main.object(forInfoDictionaryKey: "Configuration") as! String
-        
-        environment = Environment(rawValue: currentConfiguration)!
-        
-        switch environment {
-        case .debugDevelopment,.releaseDevelopment:
-            baseUrl = "https://api.github.com/"
-            break
-        case .debugStaging,.releaseStaging:
-            baseUrl = "https://api.github.com/"
-            break
-        case .debugProduction,.releaseProduction:
-            baseUrl = "https://api.github.com/"
-            break
+        if let currentConfiguration = Bundle.main.object(forInfoDictionaryKey: "Configuration") as? String,
+            let environment = Environment(rawValue: currentConfiguration) {
+            self.environment = environment
         }
     }
 }

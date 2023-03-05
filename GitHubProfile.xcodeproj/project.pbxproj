@@ -10,8 +10,6 @@
 		12000F0A296D6C0D008D8240 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12000F08296D6C0D008D8240 /* SplashViewController.swift */; };
 		12000F0B296D6C0E008D8240 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12000F09296D6C0D008D8240 /* SplashViewController.xib */; };
 		12000F0F296D735E008D8240 /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12000F0E296D735E008D8240 /* UINavigationControllerExtension.swift */; };
-		12000F1529757706008D8240 /* ProfileTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12000F1429757706008D8240 /* ProfileTitleView.swift */; };
-		12000F172975771A008D8240 /* ProfileTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12000F162975771A008D8240 /* ProfileTitleView.xib */; };
 		1202B394290AB7B5009FCD49 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1202B393290AB7B5009FCD49 /* UIViewControllerExtension.swift */; };
 		1207DA7028ED8FA300C510B0 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1207DA6F28ED8FA300C510B0 /* CoreDataManager.swift */; };
 		12164C5129AD3CBE00B31F90 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12164C5029AD3CBE00B31F90 /* DataManager.swift */; };
@@ -88,8 +86,6 @@
 		12000F08296D6C0D008D8240 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		12000F09296D6C0D008D8240 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 		12000F0E296D735E008D8240 /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
-		12000F1429757706008D8240 /* ProfileTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTitleView.swift; sourceTree = "<group>"; };
-		12000F162975771A008D8240 /* ProfileTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTitleView.xib; sourceTree = "<group>"; };
 		1202B393290AB7B5009FCD49 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		1207DA6F28ED8FA300C510B0 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		12164C5029AD3CBE00B31F90 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -237,18 +233,8 @@
 		12000F12297576B5008D8240 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				12000F13297576DE008D8240 /* ProfileTitleView */,
 			);
 			path = CustomViews;
-			sourceTree = "<group>";
-		};
-		12000F13297576DE008D8240 /* ProfileTitleView */ = {
-			isa = PBXGroup;
-			children = (
-				12000F1429757706008D8240 /* ProfileTitleView.swift */,
-				12000F162975771A008D8240 /* ProfileTitleView.xib */,
-			);
-			path = ProfileTitleView;
 			sourceTree = "<group>";
 		};
 		1207DA6E28ED8F8A00C510B0 /* Managers */ = {
@@ -591,6 +577,7 @@
 			buildConfigurationList = 12DF21FA286C733600095C79 /* Build configuration list for PBXNativeTarget "GitHubProfile" */;
 			buildPhases = (
 				8049FC017A454A6EF20B61F1 /* [CP] Check Pods Manifest.lock */,
+				12EAD72629B401A3004C2F8F /* SwiftLint Script */,
 				12DF21C9286C733400095C79 /* Sources */,
 				12DF21CA286C733400095C79 /* Frameworks */,
 				12DF21CB286C733400095C79 /* Resources */,
@@ -702,7 +689,6 @@
 				12A65A2A29A4DB5900439569 /* RepositoriesTableViewCell.xib in Resources */,
 				12A68A7A29B2A18400895FB3 /* LICENSE.txt in Resources */,
 				12A68A7C29B2A18400895FB3 /* Roboto-Bold.ttf in Resources */,
-				12000F172975771A008D8240 /* ProfileTitleView.xib in Resources */,
 				12A68A7329B2A18400895FB3 /* Roboto-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -724,6 +710,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		12EAD72629B401A3004C2F8F /* SwiftLint Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftLint Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n\n";
+		};
 		25D9F54576E1D4F69D643C56 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -854,7 +858,6 @@
 				1253141129096C3C007E6068 /* UIViewExtension.swift in Sources */,
 				12164C5329AD3D0300B31F90 /* Utilities.swift in Sources */,
 				1292D39729A67CD100938815 /* BaseViewModel.swift in Sources */,
-				12000F1529757706008D8240 /* ProfileTitleView.swift in Sources */,
 				1292D39529A668AB00938815 /* ProfileRepository.swift in Sources */,
 				12FA9BE3299143C4002AED1A /* ResponseStatusModel.swift in Sources */,
 				12DF21D3286C733400095C79 /* SceneDelegate.swift in Sources */,

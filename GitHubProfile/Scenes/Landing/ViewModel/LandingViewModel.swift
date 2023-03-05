@@ -57,7 +57,7 @@ class LandingViewModel: LandingViewModelProtocol {
                 switch response {
                 case .failure(let error):
                     self?.userResult = .failure(error)
-                    break
+                    print(error)
                 case .finished:
                     print("User data finished")
                     break
