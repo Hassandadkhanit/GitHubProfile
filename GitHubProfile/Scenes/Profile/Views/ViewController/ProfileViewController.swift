@@ -52,9 +52,9 @@ class ProfileViewController: BaseViewController {
         self.followingsLabel.text = "\(self.viewModel?.user?.following ?? 0)"
         self.repositoriesLabel.text = "\(self.viewModel?.user?.publicRepos ?? 0)"
         
-        desc += "| \(self.viewModel?.user?.bio ?? "(bio)") |"
-        desc += "| \(self.viewModel?.user?.company ?? "(company)") |"
-        desc += "| \(self.viewModel?.user?.location ?? "(address)") |"
+        desc += "| \(self.viewModel?.user?.bio ?? "(bio)") "
+        desc += "| \(self.viewModel?.user?.company ?? "(company)") "
+        desc += "| \(self.viewModel?.user?.location ?? "(address)") "
         desc += "| \(self.viewModel?.user?.email ?? "(@email)") |"
         self.descLabel.text =  desc
     }
@@ -96,8 +96,8 @@ class ProfileViewController: BaseViewController {
     func bindUser() {
         viewModel?.userResultPublisher
             .receive(on: RunLoop.main)
-            .sink { [weak self] repoResult in
-                self?.setData()
+            .sink { _ in
+                self.setData()
             }
             .store(in: &subscription)
     }
