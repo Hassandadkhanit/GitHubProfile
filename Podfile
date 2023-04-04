@@ -8,6 +8,7 @@ target 'GitHubProfile' do
   # Pods for GitHubProfile
 	pod 'SDWebImage'
 	pod 'SwiftLint'
+  pod 'IQKeyboardManagerSwift'
 
   target 'GitHubProfileTests' do
     inherit! :search_paths

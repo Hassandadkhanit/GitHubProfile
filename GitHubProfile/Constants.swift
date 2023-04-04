@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class Constants {    
+class Constants {
     static let dateFormate = "yyyy-MM-dd'T'HH:mm:ss'Z'"
     static let dateFormate2 = "MMM d, yyyy h:mm a"
 }

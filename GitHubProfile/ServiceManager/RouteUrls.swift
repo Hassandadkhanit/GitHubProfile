@@ -11,8 +11,8 @@ struct RouteUrls {
     
     static let usersRoute               = "users"
     
-    static func getRouteUrlWith(route:String) -> String  {
-        let baseUrl = BuildConfiguration.shared.baseUrl
+    static func getRouteUrlWith(route: String) -> String  {
+        let baseUrl = BuildConfiguration.shared.baseURL
         return baseUrl + route
     }
 }

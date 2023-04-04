@@ -10,11 +10,11 @@ import Combine
 
 typealias APICompletionHander = (_ data : Data?,_ response : HTTPURLResponse?,_ error : Error?) -> Void
 
-enum HTTPMethods  {
+enum HTTPMethods {
     case post
     case get
     
-    var value : String {
+    var value: String {
         switch self {
         case .post: return "POST"
         case .get: return "GET"
@@ -37,7 +37,6 @@ enum NetworkError: Error {
 }
 
 class APIClientHandler {
-    
     static var shared = APIClientHandler()
     private let session: URLSession
     private var cancellable = Set<AnyCancellable>()
@@ -240,9 +239,9 @@ class APIClientHandler {
         print("\n❌❌❌❌ ------- Failure Response End ------- ❌❌❌❌\n\n\n")
         
     }
-    //MARK: - Utility
-    static  func checkErrorCode(_ StatusCode: Int) -> NetworkError {
-        switch StatusCode {
+    // MARK: - Utility
+    static func checkErrorCode(_ statusCode: Int) -> NetworkError {
+        switch statusCode {
         case 400:
             return .invalidRequest
         case 401:
